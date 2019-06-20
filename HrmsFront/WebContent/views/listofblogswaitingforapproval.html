@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h1>Leaves Waiting For Approval</h1>
+	</div>
+	<div class="panel-body">
+		<div ng-if="leavesWaitingForApproval.length==0">No leaves Waiting For Approval</div>
+		<ul style="line-style: none">
+			<li ng-repeat="leaves in leavesWaitingForApproval"><a
+				href="#/getblogwaitingforapproval/{{leaves.id}}"> <b>Leave
+						Subject:</b>{{leaves.leaveSubject}}</b></a> <br> <b>Posted By:</b>{{leaves.postedBy.email}}
+					&nbsp; <br> <b>Posted On: </b>
+					{{leaves.postedOn | date:'dd-MM-yyyy'}} </li>
+
+		</ul>
+
+	</div>
+
+
+
+</div>

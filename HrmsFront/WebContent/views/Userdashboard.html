@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User DashBoard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body style="background-color:powderblue;">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Amossys consulting service</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+        <p><a href="#">My Profile</a></p>
+        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+      </div>
+      
+     <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active">
+        
+      <p><a href="#"><span class="glyphicon glyphicon-info-sign">  <font color="blue"><b>AboutUs</b></font></a></span></p>
+      <p><a href="#"><span class="glyphicon glyphicon-phone">   <font color="blue"><b>Contact</b></font></a></span></p>
+      <p><a href="#"><span class="glyphicon glyphicon-upload">  <font color="blue"><b>Event</b></font></a></span></p>
+      <p><a href="#"><span class="glyphicon glyphicon-bell"> <font color="blue"><b>Notification</b></font></a></span></p>
+       <p><a href="#"><span class="glyphicon glyphicon-th-list">  <font color="blue"><b>Leaves</b></font></a></span></p>
+      <p><a href="#"><span class="glyphicon glyphicon-off">  <font color="blue"><b>SignOut</b></font></a></span></p>
+      </li>
+      </ul>
+      </div>
+      
+      
+      <!--  <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p><strong>Ey!</strong></p>
+        People are looking at your profile. Find out who.
+      </div> -->
+   
+    <div class="well">
+        <p><a href="#">Interests</a></p>
+        <p>
+          <span class="label label-default">News</span>
+          <span class="label label-primary">W3Schools</span>
+          <span class="label label-success">Labels</span>
+          <span class="label label-info">Football</span>
+          <span class="label label-warning">Gaming</span>
+          <span class="label label-danger">Friends</span>
+        </p>
+      </div>
+       </div>
+       
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+             <script language="javascript" type="text/javascript">
+var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+//  DECLARE AND INITIALIZE VARIABLES
+var Calendar = new Date();
+
+var year = Calendar.getFullYear();     // Returns year
+var month = Calendar.getMonth();    // Returns month (0-11)
+var today = Calendar.getDate();    // Returns day (1-31)
+var weekday = Calendar.getDay();    // Returns day (1-31)
+
+var DAYS_OF_WEEK = 7;    // "constant" for number of days in a week
+var DAYS_OF_MONTH = 31;    // "constant" for number of days in a month
+var cal;    // Used for printing
+
+Calendar.setDate(1);    // Start the calendar day at '1'
+Calendar.setMonth(month);    // Start the calendar month at now
+
+
+/* VARIABLES FOR FORMATTING
+NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+      tags to customize your caledanr's look. */
+
+var TR_start = '<TR>';
+var TR_end = '</TR>';
+var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><CENTER>';
+var highlight_end   = '</CENTER></TD></TR></TABLE></B>';
+var TD_start = '<TD WIDTH="30"><CENTER>';
+var TD_end = '</CENTER></TD>';
+
+/* BEGIN CODE FOR CALENDAR
+NOTE: You can format the 'BORDER', 'BGCOLOR', 'CELLPADDING', 'BORDERCOLOR'
+tags to customize your calendar's look.*/
+
+cal =  '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><CENTER><B>';
+cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
+cal += TR_start;
+
+//   DO NOT EDIT BELOW THIS POINT  //
+
+// LOOPS FOR EACH DAY OF WEEK
+for(index=0; index < DAYS_OF_WEEK; index++)
+{
+
+// BOLD TODAY'S DAY OF WEEK
+if(weekday == index)
+cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+
+// PRINTS DAY
+else
+cal += TD_start + day_of_week[index] + TD_end;
+}
+
+cal += TD_end + TR_end;
+cal += TR_start;
+
+// FILL IN BLANK GAPS UNTIL TODAY'S DAY
+for(index=0; index < Calendar.getDay(); index++)
+cal += TD_start + '  ' + TD_end;
+
+// LOOPS FOR EACH DAY IN CALENDAR
+for(index=0; index < DAYS_OF_MONTH; index++)
+{
+if( Calendar.getDate() > index )
+{
+  // RETURNS THE NEXT DAY TO PRINT
+  week_day =Calendar.getDay();
+
+  // START NEW ROW FOR FIRST DAY OF WEEK
+  if(week_day == 0)
+  cal += TR_start;
+
+  if(week_day != DAYS_OF_WEEK)
+  {
+
+  // SET VARIABLE INSIDE LOOP FOR INCREMENTING PURPOSES
+  var day  = Calendar.getDate();
+
+  // HIGHLIGHT TODAY'S DATE
+  if( today==Calendar.getDate() )
+  cal += highlight_start + day + highlight_end + TD_end;
+
+  // PRINTS DAY
+  else
+  cal += TD_start + day + TD_end;
+  }
+
+  // END ROW FOR LAST DAY OF WEEK
+  if(week_day == DAYS_OF_WEEK)
+  cal += TR_end;
+  }
+
+  // INCREMENTS UNTIL END OF THE MONTH
+  Calendar.setDate(Calendar.getDate()+1);
+
+}// end for loop
+
+cal += '</TD></TR></TABLE></TABLE>';
+
+//  PRINT CALENDAR
+document.write(cal);
+
+//  End -->
+</script>
+             
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>John</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Bo</p>
+           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Jane</p>
+           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Anja</p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p>Upcoming Events:</p>
+        <img src="paris.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Paris</strong></p>
+        <p>Fri. 27 November 2015</p>
+        <button class="btn btn-primary">Info</button>
+      </div>      
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

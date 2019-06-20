@@ -1,0 +1,35 @@
+
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<b>Leave Subject:</b>{{leaves.leaveSubject}}<br> 
+		<b>Posted By:</b>{{leaves.postedBy.email}}&nbsp;<br> 
+		<b>Posted on:</b>{{leaves.postedOn| date:'dd:MM:yyyy'}}<br>-
+	</div>
+	<div class="panel-body">
+		<p ng-bind-html="content">
+	</div>
+	<div>
+	<button class="btn btn-info" ng-click="approveLeaves(leaves)" >Approve</button>
+	<button class="btn btn-danger" ng-click="showTextArea()" >Reject</button>
+	<div ng-show="isRejected">
+	<textarea ng-model="rejectionReason">
+	
+	</textarea>
+    <button ng-click="rejectLeaves(leaves)" >Submit </button>
+    </div>
+	</div>
+</div>
+
+
+
+
+

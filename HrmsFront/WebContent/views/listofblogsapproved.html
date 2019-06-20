@@ -1,0 +1,26 @@
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+
+</div>
+<div class="panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="blog in blogsApproved">
+<a href="#/getleaves/{{leaves.id}}"><b>leave Title:</b>
+{{leaves.leaveSubject}}</a><br>
+<b>Posted On:</b>
+{{leaves.postedOn | date:'dd:MM:yyyy'}}<br>
+<b>Posted By:</b>
+{{leaves.postedBy.email}} 
+<hr>
+</li>
+</ul>
+</div>
+</div>
